@@ -1,0 +1,21 @@
+<phpunit
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/latest/phpunit.xsd"
+  colors="true"
+  cacheResult="false"
+>
+  <testsuites>
+    <testsuite name="Unit">
+      <directory>./tests/Unit</directory>
+    </testsuite>
+    <testsuite name="Acceptance">
+      <directory suffix=".phpt">./tests/Acceptance</directory>
+    </testsuite>
+  </testsuites>
+
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </coverage>
+</phpunit>
