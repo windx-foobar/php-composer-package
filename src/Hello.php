@@ -7,22 +7,14 @@ namespace WindxFoobar\PhpComposerPackage;
 /**
  * Class Hello
  *
- * @property-read string $test
- *
  * @package WindxFoobar\PhpComposerPackage
  */
 class Hello {
-   private string $test;
 
-   public function __construct() {
-      echo 'hello world';
+   public function __construct(public string $name) {
    }
 
-   public function __get(string $name): string {
-      return $this->$name;
-   }
-
-   public function main(): string {
-      return $this->test;
+   public function sayHello(): string {
+      return "Hello, my dear friend {$this->name}";
    }
 }

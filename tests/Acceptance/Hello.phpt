@@ -1,8 +1,13 @@
 --TEST--
-echo - basic test for echo language construct
+Поздароваться реализацией
 --FILE--
 <?php
-echo 'This works ', 'and takes args!';
+
+require __DIR__ . '/../../vendor/autoload.php';
+
+$hello = new \WindxFoobar\PhpComposerPackage\Hello('WindX');
+echo $hello->sayHello();
+
 ?>
 --EXPECT--
-This works and takes args!
+Hello, my dear friend WindX
